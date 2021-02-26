@@ -1,0 +1,35 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list-item {
+  @include size($w: 44px, $h: 44px);
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include size($w: 44px, $h: 44px);
+  border-radius: 50%;
+  transition: background-color 250ms var(--transition-cubic),
+    color 250ms var(--transition-cubic);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+}
+
+.social-list-ikon {
+  @include size($w: 20px, $h: 20px);
+  fill: #afb1b8;
+  transition: fill 250ms var(--transition-cubic);
+
+  .social-list-link:hover &,
+  .social-list-link:focus & {
+    fill: var(--basic-color);
+  }
+}

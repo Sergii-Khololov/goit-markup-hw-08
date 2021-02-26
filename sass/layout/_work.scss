@@ -1,0 +1,21 @@
+.work {
+  padding-bottom: 94px;
+}
+
+.work-list {
+  display: flex;
+}
+
+.work-title {
+  font-weight: 700;
+  font-size: 36px;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+
+.work-item:not(:last-child) {
+  margin-right: 30px;
+}
