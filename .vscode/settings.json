@@ -17,7 +17,7 @@
     ],
     "liveSassCompile.settings.generateMap": true,
     "liveServer.settings.port": 1235,
-    "liveSassCompile.settings.autoprefix": null
+    // "liveSassCompile.settings.autoprefix": null
 }
 
 // При отправке задание зделай комит , чтоб проставить автопрефиксы:
