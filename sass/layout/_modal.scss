@@ -13,13 +13,23 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  @include size($w: 528px, $h: 581px);
   padding: 40px;
 
   background-color: var(--basic-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  width: 100%;
+  max-width: 450px;
+  height: 95%;
+  max-height: 608px;
+  overflow: scroll;
+
+  @media screen and (min-width: 1200px) {
+    @include size($w: 528px, $h: 581px);
+    max-width: none;
+  }
 }
 
 .modal-close-btn {
@@ -74,13 +84,18 @@
 }
 
 .modal-text {
-  @include size($w: 448px, $h: 23px);
-  @include font($fw: 700, $fs: 20px, $lh: 23px);
+  @include size($w: 370px, $h: 60px);
+  @include font($fw: 700, $fs: 20px, $lh: 30px);
+
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
-
   color: var(--text-color);
+
+  @media screen and (min-width: 1200px) {
+    @include size($w: 448px, $h: 23px);
+    @include font($fw: 700, $fs: 20px, $lh: 23px);
+  }
 }
 
 .modal-form {
@@ -148,11 +163,11 @@
 }
 
 .modal-form-label-policy {
-  @include flex(flex, center, center);
-  min-width: 400px;
-  height: 24px;
+  height: 14px;
+  @include font($fw: 400, $fs: 12px, $lh: 14px);
 
-  @include font($fw: 400, $fs: 14px, $lh: 24px);
+  @include flex(flex, center, center);
+
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 
@@ -178,6 +193,12 @@
       border: 2px solid var(--accent-color);
       outline: none;
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font($fw: 400, $fs: 14px, $lh: 24px);
+    min-width: 400px;
+    height: 24px;
   }
 }
 
@@ -238,3 +259,5 @@
 .modal-form-input-textarea {
   margin-bottom: 20px;
 }
+
+/*====== cheng ======*/

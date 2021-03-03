@@ -1,24 +1,42 @@
 .footer-form {
-  @include size($w: 570px, $h: 86px);
+  @include size($w: 450px, $h: 156px);
+  margin-top: 60px;
+
+  @media screen and(min-width: 1200px) {
+    @include size($w: 570px, $h: 86px);
+    margin-top: 0;
+  }
 }
 
 .footer-form-container {
-  display: flex;
-  align-items: center;
+  padding-left: 16px;
+  @media screen and(min-width: 1200px) {
+    padding: 0;
+    display: flex;
+  }
+  // display: flex;
+  // align-items: center;
 }
 
 .footer-form-text {
+  text-align: center;
   @include font($fw: 700, $fs: 14px, $lh: 16px);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
 
   color: var(--basic-color);
+  @media screen and(min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .footer-form-input {
-  @include size($w: 358px, $h: 50px);
-  margin-right: 12px;
+  @include size($w: 100%, $h: 50px);
+  // (480;768)
+  // width: 480px;
+  // height: 768px;
+  margin-bottom: 20px;
   padding-left: 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -40,6 +58,11 @@
   &:focus {
     border-color: var(--basic-color);
   }
+
+  @media screen and(min-width: 1200px) {
+    @include size($w: 358px, $h: 50px);
+    margin-right: 12px;
+  }
 }
 
 .footer-form-btn {
@@ -50,7 +73,7 @@
   letter-spacing: 0.06em;
   border-radius: 4px;
   border: 0;
-
+  margin: 0 auto;
   @include flex(flex, center, center);
   text-align: center;
   cursor: pointer;
@@ -64,6 +87,9 @@
   &:focus {
     border: 1px solid var(--basic-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  @media screen and(min-width: 1200px) {
+    margin: unset;
   }
 }
 

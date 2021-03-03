@@ -1,27 +1,18 @@
-.feature {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.feature-list {
-  display: flex;
-}
-
-.feature-item {
-  width: 270px;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
 .rectangle {
-  @include size($w: 270px, $h: 120px);
+  @include size($w: 450px, $h: 120px);
   @include flex(flex, center, center);
 
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    @include size($w: 354px, $h: 120px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include size($w: 270px, $h: 120px);
+  }
 }
 
 .feature-item-ikon {
@@ -29,17 +20,72 @@
 }
 
 .feature-title {
-  font-weight: 700;
-  font-size: 14px;
+  height: 16px;
+  @include font($fw: 700, $fs: 14px, $lh: 16px);
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--text-color);
   margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    text-align: inherit;
+  }
 }
 
 .feature-text {
-  @include size($w: 270px, $h: 75px);
+  @include size($w: 450px, $h: 50px);
   @include font($fw: 400, $fs: 14px, $lh: 24px);
   letter-spacing: 0.03em;
   color: var(--subtitle-color);
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    @include size($w: 354px, $h: 75px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include size($w: 270px, $h: 75px);
+  }
+}
+
+.feature-list {
+  @include size($w: 450px, $h: 994px);
+
+  @media screen and (min-width: 768px) {
+    @include size($w: 738px, $h: 507px);
+    flex-wrap: wrap;
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    @include size($w: 1170px, $h: 251px);
+    flex-wrap: nowrap;
+  }
+}
+
+.feature-item {
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+  }
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.feature {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }

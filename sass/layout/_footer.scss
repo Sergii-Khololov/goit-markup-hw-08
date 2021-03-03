@@ -1,33 +1,65 @@
 .footer {
+  width: 480px;
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  height: 252px;
-}
 
-.footer-link-mail {
-  margin-bottom: 9px;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1600px;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .foo-link {
-  @include size($w: 145px, $h: 31px);
-  @include font($fw: 700, $fs: 26px, $lh: 31px);
+  @include size($w: 154px, $h: 28px);
+  @include font($fw: 700, $fs: 24px, $lh: 28px);
   letter-spacing: 0.03em;
 
   color: var(--basic-color);
+
+  @media screen and (min-width: 1200px) {
+    @include size($w: 145px, $h: 31px);
+    @include font($fw: 700, $fs: 26px, $lh: 31px);
+  }
+}
+
+.contacts {
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-right: 70px;
+    text-align: start;
+  }
 }
 
 .footer-map {
-  color: var(--basic-color);
-}
-
-.footer-list-item {
-  @include font($lh: 24px);
+  @include font($fw: 400, $fs: 14px, $lh: 24px);
+  text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 6px;
+
+  color: var(--basic-color);
+
+  @media screen and(min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .footer-link {
+  @include font($fw: 400, $fs: 14px, $lh: 24px);
+  text-align: center;
+  letter-spacing: 0.03em;
+
   color: var(--contact-color);
   transition: color 250ms var(--transition-cubic);
 
@@ -37,11 +69,38 @@
   }
 }
 
-.footer-link-mail,
-.footer-link-tel {
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.03em;
+.footer-list-item {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-social {
+  @include size($w: 206px, $h: 80px);
+  text-align: center;
+  margin-bottom: 60px;
+  margin: auto;
+
+  @media screen and (min-width: 768px) {
+    margin: unset;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
+
+  // .footer-social {
+  //   @include size($w: 206px, $h: 80px);
+  //   margin-right: 93px;
+  // }
 }
 
 .footer-title {
@@ -54,8 +113,18 @@
 }
 
 .footer-contacts {
-  display: flex;
-  align-items: baseline;
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    justify-content: unset;
+  }
 }
 
 .footer-ikon {
@@ -91,14 +160,95 @@
 
 .footer-list-social {
   display: flex;
+  justify-content: center;
   justify-content: space-between;
 }
 
-.contacts {
-  margin-right: 70px;
-}
+/*============&========*/
 
-.footer-social {
-  @include size($w: 206px, $h: 80px);
-  margin-right: 93px;
-}
+// .footer-link-mail {
+//   margin-bottom: 9px;
+// }
+
+// .foo-link {
+//   @include size($w: 145px, $h: 31px);
+//   @include font($fw: 700, $fs: 26px, $lh: 31px);
+//   letter-spacing: 0.03em;
+
+//   color: var(--basic-color);
+// }
+
+// .footer-map {
+//   color: var(--basic-color);
+// }
+
+// .footer-list-item {
+//   @include font($lh: 24px);
+//   letter-spacing: 0.03em;
+//   margin-bottom: 6px;
+// }
+
+// .footer-link {
+//   color: var(--contact-color);
+//   transition: color 250ms var(--transition-cubic);
+
+//   &:hover,
+//   &:focus {
+//     color: var(--accent-color);
+//   }
+// }
+
+// .footer-link-mail,
+// .footer-link-tel {
+//   font-weight: 400;
+//   font-size: 14px;
+//   letter-spacing: 0.03em;
+// }
+
+// .footer-title {
+//   @include font($fw: 700, $fs: 14px, $lh: 16px);
+//   letter-spacing: 0.03em;
+//   text-transform: uppercase;
+//   margin-bottom: 20px;
+
+//   color: var(--basic-color);
+// }
+
+// .footer-contacts {
+//   display: flex;
+//   align-items: baseline;
+// }
+
+// .footer-item-social {
+//   @include size($w: 44px, $h: 44px);
+// }
+
+// .footer-social-link {
+//   @include flex(flex, center, center);
+//   @include size($w: 44px, $h: 44px);
+//   border-radius: 50%;
+
+//   background: rgba(255, 255, 255, 0.1);
+//   transition: background-color 250ms var(--transition-cubic),
+//     color 250ms var(--transition-cubic);
+
+//   &:hover,
+//   &:focus {
+//     background-color: var(--accent-color);
+//     color: var(--basic-color);
+//   }
+// }
+
+// .footer-list-social {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .contacts {
+//   margin-right: 70px;
+// }
+
+// .footer-social {
+//   @include size($w: 206px, $h: 80px);
+//   margin-right: 93px;
+// }

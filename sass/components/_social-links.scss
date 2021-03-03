@@ -8,9 +8,7 @@
 }
 
 .social-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(flex, center, center);
   @include size($w: 44px, $h: 44px);
   border-radius: 50%;
   transition: background-color 250ms var(--transition-cubic),
