@@ -4,8 +4,12 @@
   }
 }
 
-.work {
-  padding-bottom: 94px;
+@media screen and (min-width: 1200px) {
+  .work {
+    width: 1600px;
+    padding-bottom: 94px;
+    margin: 0 auto;
+  }
 }
 
 .work-list {

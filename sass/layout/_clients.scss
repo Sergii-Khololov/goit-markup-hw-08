@@ -3,15 +3,20 @@
   // height: 393px;
   padding-top: 60px;
   padding-bottom: 60px;
+  margin: 0 auto;
 
-  // @media screen and (min-width: 768px) {
-  //   width: 738px;
-  //   height: 273px;
-  // }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
 
   @media screen and (min-width: 1200px) {
     // width: 1170px;
     // height: 182px;
+    width: 1600px;
     padding-top: 94px;
     padding-bottom: 94px;
   }
