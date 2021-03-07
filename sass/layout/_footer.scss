@@ -1,5 +1,7 @@
 .footer {
-  width: 480px;
+  // width: 480px;
+  // max-width: 480px;
+
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -10,7 +12,7 @@
   // }
 
   @media screen and (min-width: 768px) {
-    width: 768px;
+    // max-width: 768px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -87,7 +89,11 @@
 }
 
 .footer-social {
-  @include size($w: 206px, $h: 80px);
+  max-width: 206px;
+  height: 80px;
+
+  // @include size($w: 206px, $h: 80px);
+
   text-align: center;
   margin-bottom: 60px;
   margin: auto;

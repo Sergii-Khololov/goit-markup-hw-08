@@ -1,10 +1,15 @@
 .social-list {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: center;
 }
 
 .social-list-item {
   @include size($w: 44px, $h: 44px);
+}
+
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-list-link {

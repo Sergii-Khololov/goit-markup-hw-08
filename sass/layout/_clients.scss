@@ -23,8 +23,12 @@
 }
 
 .clients-title {
-  min-width: 314px;
-  height: 33px;
+  // max-width: 314px;
+  // height: 33px;
+  // @media screen and (min-width: 480px) {
+  //   max-width: 314px;
+  // }
+
   @include font($fw: 700, $fs: 28px, $lh: 33px);
   text-align: center;
   letter-spacing: 0.03em;
@@ -50,8 +54,9 @@
 }
 
 .clients-item {
-  width: 210px;
+  max-width: 210px;
   height: 90px;
+
   margin-right: 30px;
   margin-bottom: 30px;
 

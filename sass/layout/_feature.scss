@@ -19,7 +19,10 @@
 }
 
 .rectangle {
-  @include size($w: 450px, $h: 120px);
+  // @include size($w: 450px, $h: 120px);
+  max-width: 450px;
+  height: 120px;
+
   @include flex(flex, center, center);
 
   background: #f5f4fa;
@@ -54,7 +57,9 @@
 }
 
 .feature-text {
-  @include size($w: 450px, $h: 50px);
+  // @include size($w: 450px, $h: 50px);
+  max-width: 450px;
+
   @include font($fw: 400, $fs: 14px, $lh: 24px);
   letter-spacing: 0.03em;
   color: var(--subtitle-color);
@@ -70,10 +75,15 @@
 }
 
 .feature-list {
-  @include size($w: 450px, $h: 994px);
+  // @include size($w: 450px, $h: 994px);
+  max-width: 450px;
+  height: 994px;
 
   @media screen and (min-width: 768px) {
-    @include size($w: 738px, $h: 507px);
+    max-width: 738px;
+    height: 507px;
+
+    // @include size($w: 738px, $h: 507px);
     flex-wrap: wrap;
     display: flex;
   }

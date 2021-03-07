@@ -1,6 +1,13 @@
 .footer-form {
-  @include size($w: 450px, $h: 156px);
+  // max-width: 450px;
+  height: 156px;
+
+  // @include size($w: 450px, $h: 156px);
   margin-top: 60px;
+
+  @media screen and(min-width: 768px) {
+    width: 450px;
+  }
 
   @media screen and(min-width: 1200px) {
     @include size($w: 570px, $h: 86px);
@@ -9,7 +16,6 @@
 }
 
 .footer-form-container {
-  padding-left: 16px;
   @media screen and(min-width: 1200px) {
     padding: 0;
     display: flex;
